@@ -1,0 +1,25 @@
+workspace 'News.xcworkspace'
+
+install! 'cocoapods', :generate_multiple_pod_projects => true
+
+def shared_pod
+    pod 'Shared', :path => '../../shared'
+end
+
+def local_pod(name, **kwargs)
+  kwargs[:path] = "./Modules/#{name}"
+  pod name, kwargs
+end
+
+target 'News' do
+  project 'News.xcodeproj'
+  platform :ios, '12.0'
+  
+  # Data modules
+  
+  # Domain modules
+  
+  # Feature modules
+
+  shared_pod
+end
