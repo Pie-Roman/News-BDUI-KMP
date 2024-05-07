@@ -39,7 +39,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(projects.common.core.di)
+            api(projects.common.core)
             api(projects.common.core.platform)
             api(projects.common.core.network)
         }

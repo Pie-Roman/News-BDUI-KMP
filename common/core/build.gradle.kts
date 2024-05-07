@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.pyroman.news.common.core.di"
+    namespace = "ru.pyroman.news.common.core"
     compileSdk = 34
 
     defaultConfig {
@@ -26,7 +26,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.kodein)
+                api(projects.common.core.di)
+                api(libs.kotlinx.coroutines.core)
             }
         }
     }

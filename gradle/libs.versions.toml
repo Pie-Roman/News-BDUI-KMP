@@ -6,6 +6,10 @@ androidx-coreKtx = "1.10.1"
 androidx-appCompat = "1.6.1"
 androidx-fragmentKtx = "1.5.7"
 
+pyroman-mvpkmp = "1.0.2"
+
+coroutines-core = "1.7.3"
+
 kodein = "7.20.2"
 
 ktor = "2.3.2"
@@ -14,6 +18,10 @@ ktor = "2.3.2"
 androidx-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidx-coreKtx" }
 androidx-appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appCompat" }
 androidx-fragmentKtx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragmentKtx" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines-core" }
+
+pyroman-mvpkmp = { module = "ru.pyroman.mvpkmp:mvpkmp", version.ref = "pyroman-mvpkmp" }
 
 kodein = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
 

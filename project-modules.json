@@ -4,6 +4,10 @@
     "path": "androidApp"
   },
   {
+    "module": ":common:core",
+    "path": "common/core"
+  },
+  {
     "module": ":common:core:di",
     "path": "common/core/di"
   },
@@ -18,5 +22,9 @@
   {
     "module": ":common:umbrella",
     "path": "common/umbrella"
+  },
+  {
+    "module": ":base:uikit",
+    "path": "base/uikit"
   }
 ]
