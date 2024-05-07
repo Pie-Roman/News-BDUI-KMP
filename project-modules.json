@@ -14,5 +14,9 @@
   {
     "module": ":common:core:platform",
     "path": "common/core/platform"
+  },
+  {
+    "module": ":common:umbrella",
+    "path": "common/umbrella"
   }
 ]
