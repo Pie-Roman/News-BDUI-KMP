@@ -20,6 +20,8 @@ target 'News' do
   # Domain modules
   
   # Feature modules
+  
+  local_pod 'BaseUiKit'
 
   common_umbrella_pod
 end

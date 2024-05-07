@@ -1,16 +1,22 @@
 PODS:
+  - BaseUiKit (1.0):
+    - CommonUmbrella
   - CommonUmbrella (1.0)
 
 DEPENDENCIES:
+  - BaseUiKit (from `./Modules/BaseUiKit`)
   - CommonUmbrella (from `../../common/umbrella`)
 
 EXTERNAL SOURCES:
+  BaseUiKit:
+    :path: "./Modules/BaseUiKit"
   CommonUmbrella:
     :path: "../../common/umbrella"
 
 SPEC CHECKSUMS:
+  BaseUiKit: 8c8528ca1cd0af873de9eb1a8f6cd95a90ff5910
   CommonUmbrella: cb3f24333904baac166b4671af2c52fcfae5fc13
 
-PODFILE CHECKSUM: df10c3513630a348921a8618b4f4d3155016ffcf
+PODFILE CHECKSUM: d6188687eabf0ff60e95d3b703f3bcad7cd000c5
 
 COCOAPODS: 1.11.3

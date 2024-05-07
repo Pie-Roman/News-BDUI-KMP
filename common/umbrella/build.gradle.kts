@@ -34,6 +34,8 @@ kotlin {
         framework {
             baseName = "CommonUmbrella"
             isStatic = true
+            transitiveExport = true
+            export(projects.base.uikit)
         }
     }
 
@@ -42,6 +44,8 @@ kotlin {
             api(projects.common.core)
             api(projects.common.core.platform)
             api(projects.common.core.network)
+
+            api(projects.base.uikit)
         }
     }
 }
