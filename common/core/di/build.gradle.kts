@@ -36,20 +36,8 @@ kotlin {
 //                implementation(Dependencies.Ktor.serialization)
 //                implementation(Dependencies.Ktor.serializationKotlinX)
 //
-                implementation(libs.kodein)
+                api(libs.kodein)
             }
-        }
-
-        androidMain {
-//            dependencies {
-//                implementation(Dependencies.Ktor.android)
-//            }
-        }
-
-        iosMain {
-//            dependencies {
-//                implementation(Dependencies.Ktor.ios)
-//            }
         }
     }
 }

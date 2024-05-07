@@ -6,5 +6,9 @@
   {
     "module": ":common:core:di",
     "path": "common/core/di"
+  },
+  {
+    "module": ":common:core:network",
+    "path": "common/core/network"
   }
 ]
