@@ -2,8 +2,8 @@ workspace 'News.xcworkspace'
 
 install! 'cocoapods', :generate_multiple_pod_projects => true
 
-def shared_pod
-    pod 'Shared', :path => '../../shared'
+def common_umbrella_pod
+    pod 'CommonUmbrella', :path => '../../common/umbrella'
 end
 
 def local_pod(name, **kwargs)
@@ -21,5 +21,5 @@ target 'News' do
   
   # Feature modules
 
-  shared_pod
+  common_umbrella_pod
 end

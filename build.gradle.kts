@@ -6,3 +6,15 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform).apply(false)
     alias(libs.plugins.kotlinCocoapods).apply(false)
 }
+
+allprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        google()
+    }
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.layout.buildDirectory)
+}
