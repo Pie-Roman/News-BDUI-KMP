@@ -10,5 +10,9 @@
   {
     "module": ":common:core:network",
     "path": "common/core/network"
+  },
+  {
+    "module": ":common:core:platform",
+    "path": "common/core/platform"
   }
 ]
