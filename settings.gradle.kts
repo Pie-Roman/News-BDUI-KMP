@@ -30,7 +30,6 @@ dependencyResolutionManagement {
 
 
 rootProject.name = "News-BDUIKMP"
-include(":androidApp")
 include(":shared")
 
 buildscript {

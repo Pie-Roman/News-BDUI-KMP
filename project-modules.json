@@ -1,3 +1,10 @@
 [
-
+  {
+    "module": ":androidApp",
+    "path": "androidApp"
+  },
+  {
+    "module": ":common:core:di",
+    "path": "common/core/di"
+  }
 ]
