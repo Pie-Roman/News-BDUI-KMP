@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.pyroman.news.common.core.di"
+    namespace = "ru.pyroman.news.base.uikit"
     compileSdk = 34
 
     defaultConfig {
@@ -24,9 +24,16 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
+        androidMain {
+            dependencies {
+                api(libs.androidx.fragmentKtx)
+            }
+        }
+
         commonMain {
             dependencies {
-                api(libs.kodein)
+                api(libs.pyroman.mvpkmp)
+                implementation(projects.common.core)
             }
         }
     }
