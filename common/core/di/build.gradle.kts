@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.pyroman.laza.common.core.di"
+    namespace = "ru.pyroman.news.common.core.di"
     compileSdk = 34
 
     defaultConfig {
