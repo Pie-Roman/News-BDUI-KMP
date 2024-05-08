@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 android {
-    namespace = "ru.pyroman.news.base.uikit"
+    namespace = "ru.pyroman.news.data.divkit"
     compileSdk = 34
 
     defaultConfig {
@@ -24,16 +25,12 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
-        androidMain {
-            dependencies {
-                api(libs.androidx.fragmentKtx)
-            }
-        }
-
         commonMain {
             dependencies {
-                api(libs.pyroman.mvpkmp)
                 implementation(projects.common.core)
+                implementation(projects.common.core.network)
+
+                implementation(projects.domain.divkitDomain)
             }
         }
     }

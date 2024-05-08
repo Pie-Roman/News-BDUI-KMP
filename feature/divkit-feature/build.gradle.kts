@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.pyroman.news.base.uikit"
+    namespace = "ru.pyroman.news.feature.divkit"
     compileSdk = 34
 
     defaultConfig {
@@ -26,14 +26,18 @@ kotlin {
     sourceSets {
         androidMain {
             dependencies {
-                api(libs.androidx.fragmentKtx)
+                implementation(libs.divkit.div)
+                implementation(libs.divkit.core)
+                implementation(libs.divkit.json)
             }
         }
-
         commonMain {
             dependencies {
-                api(libs.pyroman.mvpkmp)
+                implementation(projects.base.uikit)
                 implementation(projects.common.core)
+
+                implementation(projects.domain.divkitDomain)
+                implementation(projects.data.divkitData)
             }
         }
     }

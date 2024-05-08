@@ -8,18 +8,24 @@ androidx-fragmentKtx = "1.5.7"
 
 pyroman-mvpkmp = "1.0.2"
 
-coroutines-core = "1.7.3"
+kotlinx-coroutines-core = "1.7.3"
+kotlinx-serialization = "1.5.1"
 
 kodein = "7.20.2"
 
 ktor = "2.3.2"
+
+divkit = "29.11.0"
+
+glide = "4.16.0"
 
 [libraries]
 androidx-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidx-coreKtx" }
 androidx-appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appCompat" }
 androidx-fragmentKtx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragmentKtx" }
 
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines-core" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 pyroman-mvpkmp = { module = "ru.pyroman.mvpkmp:mvpkmp", version.ref = "pyroman-mvpkmp" }
 
@@ -33,6 +39,13 @@ ktor-serializationKotlinX = { module = "io.ktor:ktor-serialization-kotlinx-json"
 ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 ktor-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktor" }
 ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+
+divkit-div = { module = "com.yandex.div:div", version.ref = "divkit" }
+divkit-core = { module = "com.yandex.div:div-core", version.ref = "divkit" }
+divkit-json = { module = "com.yandex.div:div-json", version.ref = "divkit" }
+divkit-data = { module = "com.yandex.div:div-data", version.ref = "divkit" }
+
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
