@@ -27,6 +27,7 @@ kotlin {
         commonMain {
             dependencies {
                 api(projects.common.core.di)
+                api(projects.common.core.platform)
                 api(libs.kotlinx.coroutines.core)
             }
         }

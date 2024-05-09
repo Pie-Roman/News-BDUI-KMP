@@ -1,5 +1,5 @@
 [versions]
-agp = "8.4.0"
+agp = "8.2.1"
 kotlin = "1.9.20"
 
 androidx-coreKtx = "1.10.1"
@@ -43,7 +43,6 @@ ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
 divkit-div = { module = "com.yandex.div:div", version.ref = "divkit" }
 divkit-core = { module = "com.yandex.div:div-core", version.ref = "divkit" }
 divkit-json = { module = "com.yandex.div:div-json", version.ref = "divkit" }
-divkit-data = { module = "com.yandex.div:div-data", version.ref = "divkit" }
 
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 
@@ -51,6 +50,7 @@ glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

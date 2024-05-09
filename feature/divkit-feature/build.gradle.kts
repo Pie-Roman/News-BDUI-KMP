@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinParcelize)
 }
 
 android {
@@ -9,6 +10,10 @@ android {
 
     defaultConfig {
         minSdk = 24
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     compileOptions {
@@ -29,6 +34,8 @@ kotlin {
                 implementation(libs.divkit.div)
                 implementation(libs.divkit.core)
                 implementation(libs.divkit.json)
+
+                implementation(libs.glide)
             }
         }
         commonMain {
