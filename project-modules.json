@@ -38,5 +38,9 @@
   {
     "module": ":feature:divkit-feature",
     "path": "feature/divkit-feature"
+  },
+  {
+    "module": ":feature:divkit-custom-feature",
+    "path": "feature/divkit-custom-feature"
   }
 ]

@@ -49,6 +49,7 @@ kotlin {
             api(projects.common.core.network)
 
             api(projects.feature.divkitFeature)
+            api(projects.feature.divkitCustomFeature)
 
             api(projects.base.uikit)
         }
