@@ -1,12 +1,20 @@
 import UIKit
+import CommonUmbrella
+import DivkitFeature
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private class IosPlatformConfiguration: PlatformConfiguration {
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        PlatformSDK.shared.doInitPlatform(
+            configuration: IosPlatformConfiguration(),
+            platformModule: divkitModule
+        )
         return true
     }
 
