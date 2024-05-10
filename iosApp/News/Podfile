@@ -15,11 +15,8 @@ target 'News' do
   project 'News.xcodeproj'
   platform :ios, '12.0'
   
-  # Data modules
-  
-  # Domain modules
-  
   # Feature modules
+  local_pod 'DivkitFeature'
   
   local_pod 'BaseUiKit'
 

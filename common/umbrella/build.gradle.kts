@@ -9,7 +9,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 24
     }
 
     compileOptions {
@@ -34,8 +34,11 @@ kotlin {
         framework {
             baseName = "CommonUmbrella"
             isStatic = true
+
             transitiveExport = true
+
             export(projects.base.uikit)
+            export(projects.feature.divkitFeature)
         }
     }
 
@@ -44,6 +47,9 @@ kotlin {
             api(projects.common.core)
             api(projects.common.core.platform)
             api(projects.common.core.network)
+
+            api(projects.feature.divkitFeature)
+            api(projects.feature.divkitCustomFeature)
 
             api(projects.base.uikit)
         }

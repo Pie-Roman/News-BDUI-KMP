@@ -26,5 +26,21 @@
   {
     "module": ":base:uikit",
     "path": "base/uikit"
+  },
+  {
+    "module": ":data:divkit-data",
+    "path": "data/divkit-data"
+  },
+  {
+    "module": ":domain:divkit-domain",
+    "path": "domain/divkit-domain"
+  },
+  {
+    "module": ":feature:divkit-feature",
+    "path": "feature/divkit-feature"
+  },
+  {
+    "module": ":feature:divkit-custom-feature",
+    "path": "feature/divkit-custom-feature"
   }
 ]

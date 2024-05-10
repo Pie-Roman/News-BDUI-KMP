@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 24
     }
 
     compileOptions {
@@ -27,6 +27,7 @@ kotlin {
         commonMain {
             dependencies {
                 api(projects.common.core.di)
+                api(projects.common.core.platform)
                 api(libs.kotlinx.coroutines.core)
             }
         }

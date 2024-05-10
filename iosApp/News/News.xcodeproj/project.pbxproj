@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		CCADDB682BE7DF99007C25E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB672BE7DF99007C25E7 /* AppDelegate.swift */; };
 		CCADDB6A2BE7DF99007C25E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */; };
-		CCADDB6C2BE7DF99007C25E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB6B2BE7DF99007C25E7 /* ViewController.swift */; };
+		CCADDB6C2BE7DF99007C25E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB6B2BE7DF99007C25E7 /* MainViewController.swift */; };
 		CCADDB712BE7DF9B007C25E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCADDB702BE7DF9B007C25E7 /* Assets.xcassets */; };
+		CCBC21E62BEE8DEC00C2FF25 /* DivkitFeature.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CCBC21E42BEE8DEC00C2FF25 /* DivkitFeature.podspec */; };
+		CCBC22DC2BEE922F00C2FF25 /* DivkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC22DB2BEE922F00C2FF25 /* DivkitViewController.swift */; };
+		CCBC22E02BEE926100C2FF25 /* DivDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC22DF2BEE926100C2FF25 /* DivDataParser.swift */; };
+		CCBC22E22BEE929200C2FF25 /* DivKitComponentsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC22E12BEE929200C2FF25 /* DivKitComponentsFactory.swift */; };
+		CCBC22E42BEE92E400C2FF25 /* IosDivkitViewArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC22E32BEE92E400C2FF25 /* IosDivkitViewArgs.swift */; };
+		CCBC22E62BEE92F800C2FF25 /* DivkitModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC22E52BEE92F800C2FF25 /* DivkitModule.swift */; };
 		CCF22FDE2BEAA6E0007ACA8D /* common in Resources */ = {isa = PBXBuildFile; fileRef = CCF22FDD2BEAA6E0007ACA8D /* common */; };
 		CCF22FE02BEAA722007ACA8D /* base in Resources */ = {isa = PBXBuildFile; fileRef = CCF22FDF2BEAA722007ACA8D /* base */; };
 		CCF22FE62BEAA813007ACA8D /* BaseUiKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CCF22FE42BEAA813007ACA8D /* BaseUiKit.podspec */; };
@@ -24,9 +30,15 @@
 		CCADDB642BE7DF99007C25E7 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCADDB672BE7DF99007C25E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCADDB6B2BE7DF99007C25E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCADDB6B2BE7DF99007C25E7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCADDB702BE7DF9B007C25E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCADDB752BE7DF9B007C25E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCBC21E42BEE8DEC00C2FF25 /* DivkitFeature.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DivkitFeature.podspec; sourceTree = "<group>"; };
+		CCBC22DB2BEE922F00C2FF25 /* DivkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivkitViewController.swift; sourceTree = "<group>"; };
+		CCBC22DF2BEE926100C2FF25 /* DivDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivDataParser.swift; sourceTree = "<group>"; };
+		CCBC22E12BEE929200C2FF25 /* DivKitComponentsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivKitComponentsFactory.swift; sourceTree = "<group>"; };
+		CCBC22E32BEE92E400C2FF25 /* IosDivkitViewArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosDivkitViewArgs.swift; sourceTree = "<group>"; };
+		CCBC22E52BEE92F800C2FF25 /* DivkitModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivkitModule.swift; sourceTree = "<group>"; };
 		CCF22FDD2BEAA6E0007ACA8D /* common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = common; path = ../../../common; sourceTree = "<group>"; };
 		CCF22FDF2BEAA722007ACA8D /* base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = base; path = ../../../base; sourceTree = "<group>"; };
 		CCF22FE42BEAA813007ACA8D /* BaseUiKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaseUiKit.podspec; sourceTree = "<group>"; };
@@ -79,11 +91,32 @@
 			children = (
 				CCADDB672BE7DF99007C25E7 /* AppDelegate.swift */,
 				CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */,
-				CCADDB6B2BE7DF99007C25E7 /* ViewController.swift */,
+				CCADDB6B2BE7DF99007C25E7 /* MainViewController.swift */,
 				CCADDB702BE7DF9B007C25E7 /* Assets.xcassets */,
 				CCADDB752BE7DF9B007C25E7 /* Info.plist */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		CCBC21E32BEE8DEC00C2FF25 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CCBC22DB2BEE922F00C2FF25 /* DivkitViewController.swift */,
+				CCBC22DF2BEE926100C2FF25 /* DivDataParser.swift */,
+				CCBC22E12BEE929200C2FF25 /* DivKitComponentsFactory.swift */,
+				CCBC22E32BEE92E400C2FF25 /* IosDivkitViewArgs.swift */,
+				CCBC22E52BEE92F800C2FF25 /* DivkitModule.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CCBC21E52BEE8DEC00C2FF25 /* DivkitFeature */ = {
+			isa = PBXGroup;
+			children = (
+				CCBC21E32BEE8DEC00C2FF25 /* Sources */,
+				CCBC21E42BEE8DEC00C2FF25 /* DivkitFeature.podspec */,
+			);
+			path = DivkitFeature;
 			sourceTree = "<group>";
 		};
 		CCF22FDC2BEAA69A007ACA8D /* CommonUmbrella */ = {
@@ -98,6 +131,7 @@
 		CCF22FE12BEAA736007ACA8D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CCBC21E52BEE8DEC00C2FF25 /* DivkitFeature */,
 				CCF22FE22BEAA746007ACA8D /* BaseUiKit */,
 			);
 			path = Modules;
@@ -148,6 +182,7 @@
 				CCADDB602BE7DF99007C25E7 /* Sources */,
 				CCADDB612BE7DF99007C25E7 /* Frameworks */,
 				CCADDB622BE7DF99007C25E7 /* Resources */,
+				9B18E05DF2893A814AFA5280 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,6 +233,7 @@
 			files = (
 				CCF22FE02BEAA722007ACA8D /* base in Resources */,
 				CCADDB712BE7DF9B007C25E7 /* Assets.xcassets in Resources */,
+				CCBC21E62BEE8DEC00C2FF25 /* DivkitFeature.podspec in Resources */,
 				CCF22FDE2BEAA6E0007ACA8D /* common in Resources */,
 				CCF22FE62BEAA813007ACA8D /* BaseUiKit.podspec in Resources */,
 			);
@@ -206,6 +242,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9B18E05DF2893A814AFA5280 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-News/Pods-News-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-News/Pods-News-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-News/Pods-News-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ED8F2219B66B7C2150F646C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,8 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBC22E42BEE92E400C2FF25 /* IosDivkitViewArgs.swift in Sources */,
 				CCF22FF12BEAA8B1007ACA8D /* MvpViewController.swift in Sources */,
-				CCADDB6C2BE7DF99007C25E7 /* ViewController.swift in Sources */,
+				CCBC22DC2BEE922F00C2FF25 /* DivkitViewController.swift in Sources */,
+				CCBC22E22BEE929200C2FF25 /* DivKitComponentsFactory.swift in Sources */,
+				CCBC22E62BEE92F800C2FF25 /* DivkitModule.swift in Sources */,
+				CCBC22E02BEE926100C2FF25 /* DivDataParser.swift in Sources */,
+				CCADDB6C2BE7DF99007C25E7 /* MainViewController.swift in Sources */,
 				CCADDB682BE7DF99007C25E7 /* AppDelegate.swift in Sources */,
 				CCADDB6A2BE7DF99007C25E7 /* SceneDelegate.swift in Sources */,
 			);
@@ -373,6 +431,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JCTFR9C8T;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = News/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -402,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JCTFR9C8T;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = News/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 24
     }
 
     compileOptions {
@@ -27,6 +27,8 @@ kotlin {
         commonMain {
             dependencies {
                 api(libs.ktor.core)
+                api(libs.kotlinx.serialization)
+
                 implementation(libs.ktor.contentNegotiation)
                 implementation(libs.ktor.json)
                 implementation(libs.ktor.logging)
