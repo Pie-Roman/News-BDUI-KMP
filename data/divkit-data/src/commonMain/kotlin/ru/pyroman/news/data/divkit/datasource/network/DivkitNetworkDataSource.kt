@@ -5,6 +5,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.modules.SerializersModule
 import ru.pyroman.news.data.divkit.datasource.network.httpclient.DivkitHttpClient
 import ru.pyroman.news.data.divkit.datasource.network.httpclient.ViewRequestParams
+import ru.pyroman.news.data.divkit.dto.PatchDataDto
 import ru.pyroman.news.data.divkit.dto.ViewDataDto
 
 internal class DivkitNetworkDataSource(
@@ -29,6 +30,18 @@ internal class DivkitNetworkDataSource(
 
         return ViewDataDto(
             rawDivData = rawDivData,
+        )
+    }
+
+    suspend fun getViewPatchData(path: String): PatchDataDto {
+        val response = json.parseToJsonElement(
+            divkitHttpClient.getPatch(path)
+        ).jsonObject
+
+        val rawPatchData = response["divanPatch"]?.toString()
+
+        return PatchDataDto(
+            rawPatchData = rawPatchData,
         )
     }
 }

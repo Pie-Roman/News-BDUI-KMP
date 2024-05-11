@@ -4,10 +4,12 @@ import android.content.Context
 import com.yandex.div.core.DivActionHandler
 import com.yandex.div.core.DivConfiguration
 import com.yandex.div.core.DivCustomContainerViewAdapter
+import com.yandex.div.core.downloader.DivDownloader
 import ru.pyroman.news.feature.divkit.imageloader.DivImageLoaderFactory
 
 internal class DivConfigurationFactory(
     private val imageLoaderFactory: DivImageLoaderFactory,
+    private val divDownloader: DivDownloader,
     private val divCustomContainerViewAdapter: DivCustomContainerViewAdapter,
 ) {
 
@@ -21,6 +23,7 @@ internal class DivConfigurationFactory(
         )
             .actionHandler(actionHandler)
             .divCustomContainerViewAdapter(divCustomContainerViewAdapter)
+            .divDownloader(divDownloader)
 
         return builder.build()
     }

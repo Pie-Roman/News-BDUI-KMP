@@ -21,4 +21,15 @@ internal class DivkitHttpClient(
             }
         }.body()
     }
+
+    suspend fun getPatch(path: String): String {
+        return httpClient.request {
+            url {
+                method = HttpMethod.Get
+                protocol = config.protocol
+                host = config.host
+                path(path)
+            }
+        }.body()
+    }
 }

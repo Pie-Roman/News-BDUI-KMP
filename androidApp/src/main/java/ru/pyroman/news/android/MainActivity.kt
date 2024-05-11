@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val args = AndroidDivkitViewArgs(
-            query = "news-list"
+            query = "tabs"
         )
 
         supportFragmentManager.commit {

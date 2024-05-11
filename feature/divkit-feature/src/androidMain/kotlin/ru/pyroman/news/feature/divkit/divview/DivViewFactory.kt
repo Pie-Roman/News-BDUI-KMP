@@ -4,16 +4,14 @@ import android.view.View
 import com.yandex.div.DivDataTag
 import com.yandex.div.core.view2.Div2View
 import com.yandex.div.data.DivParsingEnvironment
-import com.yandex.div.json.ParsingErrorLogger
 import com.yandex.div2.DivData
 import org.json.JSONObject
 import ru.pyroman.news.feature.divkit.context.DivContextFactory
 
 internal class DivViewFactory(
     private val contextFactory: DivContextFactory,
+    private val environment: DivParsingEnvironment,
 ) {
-
-    private val environment = DivParsingEnvironment(ParsingErrorLogger.ASSERT)
 
     fun create(
         rawDivData: String,
