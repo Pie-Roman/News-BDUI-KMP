@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CC26EBC42BEFEEE000C17F0F /* DivPatchProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26EBC32BEFEEE000C17F0F /* DivPatchProviderImpl.swift */; };
+		CC7D33932BF028E5001515D8 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33902BF028E5001515D8 /* data */; };
+		CC7D33942BF028E5001515D8 /* domain in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33912BF028E5001515D8 /* domain */; };
+		CC7D33952BF028E5001515D8 /* feature in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33922BF028E5001515D8 /* feature */; };
 		CCADDB682BE7DF99007C25E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB672BE7DF99007C25E7 /* AppDelegate.swift */; };
 		CCADDB6A2BE7DF99007C25E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */; };
 		CCADDB6C2BE7DF99007C25E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB6B2BE7DF99007C25E7 /* MainViewController.swift */; };
@@ -29,6 +32,9 @@
 		72E13208ECCDCDFAAA62F423 /* libPods-News.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-News.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F568953FB26BEF4008EF6CE /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
 		CC26EBC32BEFEEE000C17F0F /* DivPatchProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivPatchProviderImpl.swift; sourceTree = "<group>"; };
+		CC7D33902BF028E5001515D8 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../data; sourceTree = "<group>"; };
+		CC7D33912BF028E5001515D8 /* domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = domain; path = ../../../domain; sourceTree = "<group>"; };
+		CC7D33922BF028E5001515D8 /* feature */ = {isa = PBXFileReference; lastKnownFileType = folder; name = feature; path = ../../../feature; sourceTree = "<group>"; };
 		CCADDB642BE7DF99007C25E7 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCADDB672BE7DF99007C25E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 		CCF22FDC2BEAA69A007ACA8D /* CommonUmbrella */ = {
 			isa = PBXGroup;
 			children = (
+				CC7D33902BF028E5001515D8 /* data */,
+				CC7D33912BF028E5001515D8 /* domain */,
+				CC7D33922BF028E5001515D8 /* feature */,
 				CCF22FDF2BEAA722007ACA8D /* base */,
 				CCF22FDD2BEAA6E0007ACA8D /* common */,
 			);
@@ -237,7 +246,10 @@
 				CCF22FE02BEAA722007ACA8D /* base in Resources */,
 				CCADDB712BE7DF9B007C25E7 /* Assets.xcassets in Resources */,
 				CCBC21E62BEE8DEC00C2FF25 /* DivkitFeature.podspec in Resources */,
+				CC7D33952BF028E5001515D8 /* feature in Resources */,
 				CCF22FDE2BEAA6E0007ACA8D /* common in Resources */,
+				CC7D33942BF028E5001515D8 /* domain in Resources */,
+				CC7D33932BF028E5001515D8 /* data in Resources */,
 				CCF22FE62BEAA813007ACA8D /* BaseUiKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
