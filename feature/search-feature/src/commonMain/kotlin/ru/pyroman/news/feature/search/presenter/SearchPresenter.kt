@@ -14,8 +14,13 @@ class SearchPresenter(
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        view?.registerOnSearchInput {
 
+        view?.registerOnSearchInput { searchInput ->
+            launch(
+                block = {
+                    useCases.setSearchInput(searchInput)
+                }
+            )
         }
         view?.registerOnCancelClick {
             view?.clearSearchInput()
@@ -24,6 +29,7 @@ class SearchPresenter(
 
     override fun detachView() {
         view?.unregisterOnSearchInput()
+        view?.unregisterOnCancelClick()
         super.detachView()
     }
 }

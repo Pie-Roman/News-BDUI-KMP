@@ -2,11 +2,14 @@ package ru.pyroman.news.feature.search
 
 import org.kodein.di.DI
 import ru.pyroman.news.common.core.di.Inject.instance
+import ru.pyroman.news.common.core.di.lazyInstance
 import ru.pyroman.news.common.core.di.module
 import ru.pyroman.news.common.core.di.module.Module
 import ru.pyroman.news.common.core.di.module.ModuleBridge
 import ru.pyroman.news.common.core.di.provider
 import ru.pyroman.news.common.core.di.singleton
+import ru.pyroman.news.data.search.searchDataCommonModule
+import ru.pyroman.news.domain.search.searchDomainCommonModule
 import ru.pyroman.news.feature.search.presenter.SearchPresenterFactory
 import ru.pyroman.news.feature.search.usecases.SearchUseCases
 
@@ -15,8 +18,15 @@ object SearchModuleAssembler : Module() {
     override val name = "searchModule"
 
     private val searchCommonModule = module("searchCommonModule") {
+        importAll(
+            searchDomainCommonModule,
+            searchDataCommonModule,
+        )
+
         provider {
-           SearchUseCases()
+           SearchUseCases(
+               setSearchInputUseCase = instance(),
+           )
         }
 
         singleton {

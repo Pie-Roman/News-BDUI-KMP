@@ -1,19 +1,14 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.kotlinParcelize)
 }
 
 android {
-    namespace = "ru.pyroman.news.feature.search"
+    namespace = "ru.pyroman.news.data.search"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 24
-    }
-
-    buildFeatures {
-        viewBinding = true
     }
 
     compileOptions {
@@ -31,11 +26,9 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.base.uikit)
                 implementation(projects.common.core)
 
                 implementation(projects.domain.searchDomain)
-                implementation(projects.data.searchData)
             }
         }
     }
