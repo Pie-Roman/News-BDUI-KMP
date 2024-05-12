@@ -1,14 +1,19 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinParcelize)
 }
 
 android {
-    namespace = "ru.pyroman.news.base.uikit"
+    namespace = "ru.pyroman.news.feature.search"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 24
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     compileOptions {
@@ -24,16 +29,9 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
-        androidMain {
-            dependencies {
-                api(libs.androidx.fragmentKtx)
-                api(libs.androidx.constraintLayout)
-            }
-        }
-
         commonMain {
             dependencies {
-                api(libs.pyroman.mvpkmp)
+                implementation(projects.base.uikit)
                 implementation(projects.common.core)
             }
         }

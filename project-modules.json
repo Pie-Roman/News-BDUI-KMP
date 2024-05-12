@@ -42,5 +42,9 @@
   {
     "module": ":feature:divkit-custom-feature",
     "path": "feature/divkit-custom-feature"
+  },
+  {
+    "module": ":feature:search-feature",
+    "path": "feature/search-feature"
   }
 ]
