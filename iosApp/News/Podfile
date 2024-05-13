@@ -17,6 +17,7 @@ target 'News' do
   
   # Feature modules
   local_pod 'DivkitFeature'
+  local_pod 'SearchFeature'
   
   local_pod 'BaseUiKit'
 

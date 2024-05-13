@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC01C4012BF1F58600417BB3 /* SearchFeature.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CC01C4002BF1F58600417BB3 /* SearchFeature.podspec */; };
+		CC01C4732BF1F60000417BB3 /* SearchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01C4722BF1F60000417BB3 /* SearchModule.swift */; };
+		CC01C4752BF1F60900417BB3 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01C4742BF1F60900417BB3 /* SearchView.swift */; };
+		CC01C47A2BF24D1900417BB3 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01C4792BF24D1900417BB3 /* UIViewUtils.swift */; };
+		CC01C56E2BF25E9000417BB3 /* UIColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01C56D2BF25E9000417BB3 /* UIColorUtils.swift */; };
 		CC26EBC42BEFEEE000C17F0F /* DivPatchProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26EBC32BEFEEE000C17F0F /* DivPatchProviderImpl.swift */; };
 		CC7D33932BF028E5001515D8 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33902BF028E5001515D8 /* data */; };
 		CC7D33942BF028E5001515D8 /* domain in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33912BF028E5001515D8 /* domain */; };
@@ -31,6 +36,11 @@
 /* Begin PBXFileReference section */
 		72E13208ECCDCDFAAA62F423 /* libPods-News.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-News.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F568953FB26BEF4008EF6CE /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
+		CC01C4002BF1F58600417BB3 /* SearchFeature.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchFeature.podspec; sourceTree = "<group>"; };
+		CC01C4722BF1F60000417BB3 /* SearchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModule.swift; sourceTree = "<group>"; };
+		CC01C4742BF1F60900417BB3 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		CC01C4792BF24D1900417BB3 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
+		CC01C56D2BF25E9000417BB3 /* UIColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorUtils.swift; sourceTree = "<group>"; };
 		CC26EBC32BEFEEE000C17F0F /* DivPatchProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivPatchProviderImpl.swift; sourceTree = "<group>"; };
 		CC7D33902BF028E5001515D8 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../data; sourceTree = "<group>"; };
 		CC7D33912BF028E5001515D8 /* domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = domain; path = ../../../domain; sourceTree = "<group>"; };
@@ -72,6 +82,33 @@
 				72E13208ECCDCDFAAA62F423 /* libPods-News.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC01C3FE2BF1F43B00417BB3 /* SearchFeature */ = {
+			isa = PBXGroup;
+			children = (
+				CC01C4002BF1F58600417BB3 /* SearchFeature.podspec */,
+				CC01C3FF2BF1F44E00417BB3 /* Sources */,
+			);
+			path = SearchFeature;
+			sourceTree = "<group>";
+		};
+		CC01C3FF2BF1F44E00417BB3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CC01C4722BF1F60000417BB3 /* SearchModule.swift */,
+				CC01C4742BF1F60900417BB3 /* SearchView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CC01C4782BF24D0B00417BB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC01C4792BF24D1900417BB3 /* UIViewUtils.swift */,
+				CC01C56D2BF25E9000417BB3 /* UIColorUtils.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CCADDB5B2BE7DF99007C25E7 = {
@@ -143,6 +180,7 @@
 		CCF22FE12BEAA736007ACA8D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CC01C3FE2BF1F43B00417BB3 /* SearchFeature */,
 				CCBC21E52BEE8DEC00C2FF25 /* DivkitFeature */,
 				CCF22FE22BEAA746007ACA8D /* BaseUiKit */,
 			);
@@ -161,6 +199,7 @@
 		CCF22FE82BEAA85C007ACA8D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CC01C4782BF24D0B00417BB3 /* View */,
 				CCF22FE92BEAA869007ACA8D /* Mvp */,
 			);
 			path = Sources;
@@ -248,6 +287,7 @@
 				CCBC21E62BEE8DEC00C2FF25 /* DivkitFeature.podspec in Resources */,
 				CC7D33952BF028E5001515D8 /* feature in Resources */,
 				CCF22FDE2BEAA6E0007ACA8D /* common in Resources */,
+				CC01C4012BF1F58600417BB3 /* SearchFeature.podspec in Resources */,
 				CC7D33942BF028E5001515D8 /* domain in Resources */,
 				CC7D33932BF028E5001515D8 /* data in Resources */,
 				CCF22FE62BEAA813007ACA8D /* BaseUiKit.podspec in Resources */,
@@ -304,9 +344,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCBC22E42BEE92E400C2FF25 /* IosDivkitViewArgs.swift in Sources */,
+				CC01C47A2BF24D1900417BB3 /* UIViewUtils.swift in Sources */,
+				CC01C4732BF1F60000417BB3 /* SearchModule.swift in Sources */,
 				CC26EBC42BEFEEE000C17F0F /* DivPatchProviderImpl.swift in Sources */,
 				CCF22FF12BEAA8B1007ACA8D /* MvpViewController.swift in Sources */,
+				CC01C4752BF1F60900417BB3 /* SearchView.swift in Sources */,
 				CCBC22DC2BEE922F00C2FF25 /* DivkitViewController.swift in Sources */,
+				CC01C56E2BF25E9000417BB3 /* UIColorUtils.swift in Sources */,
 				CCBC22E22BEE929200C2FF25 /* DivKitComponentsFactory.swift in Sources */,
 				CCBC22E62BEE92F800C2FF25 /* DivkitModule.swift in Sources */,
 				CCBC22E02BEE926100C2FF25 /* DivDataParser.swift in Sources */,
