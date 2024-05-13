@@ -10,15 +10,12 @@ import ru.pyroman.news.feature.search.databinding.ViewSearchBinding
 import ru.pyroman.news.feature.search.presenter.SearchPresenterFactory
 
 class SearchView(
-    private val viewArgs: SearchViewArgs,
     searchPresenterFactory: SearchPresenterFactory,
     context: Context
 ) : MvpFrameLayout(context), SearchMvpView {
 
     override val mvpDelegate = mvpDelegate {
-        searchPresenterFactory.create(
-            viewArgs = viewArgs,
-        )
+        searchPresenterFactory.create()
     }
 
     private val binding: ViewSearchBinding =

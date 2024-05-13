@@ -5,7 +5,6 @@ import ru.pyroman.news.feature.divkit.custom.AbstractDivCustomViewAdapter
 import ru.pyroman.news.feature.divkit.custom.DivCustomType
 import ru.pyroman.news.feature.search.presenter.SearchPresenterFactory
 import ru.pyroman.news.feature.search.view.SearchView
-import ru.pyroman.news.feature.search.view.AndroidSearchViewArgs
 
 class SearchDivCustomViewAdapter(
     private val context: Context,
@@ -15,9 +14,7 @@ class SearchDivCustomViewAdapter(
     override val customType = DivCustomType.SEARCH.customType
 
     override fun createView(): SearchView {
-        val viewArgs = AndroidSearchViewArgs()
         val searchView = SearchView(
-            viewArgs = viewArgs,
             searchPresenterFactory = searchPresenterFactory,
             context = context,
         )
