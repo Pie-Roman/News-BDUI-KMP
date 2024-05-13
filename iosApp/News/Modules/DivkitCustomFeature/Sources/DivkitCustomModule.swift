@@ -14,5 +14,8 @@ private class DivkitCustomModuleBridgeImpl: DivkitCustomModuleBridge {
     
     override func provideNativeInstances(builder: any DIBuilder) {
         
+        DIExtensionsKt.taggedProvider(builder, tag: "DivCustomBlockFactory") { _ in
+            DivCustomBlockFactoryImpl()
+        }
     }
 }

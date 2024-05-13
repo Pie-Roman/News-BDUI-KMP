@@ -69,7 +69,7 @@ private class DivkitModuleBridgeImpl : DivkitModuleBridge() {
 
             provider<DivDownloader> {
                 DivDownloaderImpl(
-                    getViewPatchDataUseCase = instance(),
+                    getViewPatchDataUseCase = instance("GetViewPatchDataUseCase"),
                     environment = instance(),
                 )
             }

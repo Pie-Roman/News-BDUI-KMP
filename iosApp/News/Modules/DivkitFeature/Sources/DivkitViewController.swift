@@ -6,7 +6,7 @@ import DivKit
 public class DivkitViewController: MvpViewController {
     
     private let args: DivkitViewArgs
-    private let divkitPresenterFactory: DivkitPresenterFactory = DivkitModuleBridge.companion.divkitPresenterFactoryInstance()
+    private let divkitPresenterFactory = Inject.shared.taggedInstance(tag: "DivkitPresenterFactory") as! DivkitPresenterFactory
     private let divDataParser = DivDataParser()
     private let divkitComponentsFactory = DivKitComponentsFactory()
 

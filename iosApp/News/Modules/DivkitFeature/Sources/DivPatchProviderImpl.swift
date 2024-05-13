@@ -12,7 +12,7 @@ import Foundation
 
 internal class DivPatchProviderImpl : DivPatchProvider {
     
-    private let getViewPatchDataUseCase: GetViewPatchDataUseCase = DivkitModuleBridge.companion.getViewPatchDataUseCaseInstance()
+    private let getViewPatchDataUseCase = Inject.shared.taggedInstance(tag: "GetViewPatchDataUseCase") as! GetViewPatchDataUseCase
     
     func getPatch(url: URL, completion: @escaping DivKit.DivPatchProviderCompletion) {
         getViewPatchDataUseCase.execute(path: url.absoluteString) { rawPatchData, error in

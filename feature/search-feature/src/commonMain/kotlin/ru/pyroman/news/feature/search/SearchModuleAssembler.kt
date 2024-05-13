@@ -2,7 +2,6 @@ package ru.pyroman.news.feature.search
 
 import org.kodein.di.DI
 import ru.pyroman.news.common.core.di.Inject.instance
-import ru.pyroman.news.common.core.di.lazyInstance
 import ru.pyroman.news.common.core.di.module
 import ru.pyroman.news.common.core.di.module.Module
 import ru.pyroman.news.common.core.di.module.ModuleBridge
@@ -29,7 +28,9 @@ object SearchModuleAssembler : Module() {
            )
         }
 
-        singleton {
+        singleton(
+            tag = "SearchPresenterFactory"
+        ) {
             SearchPresenterFactory()
         }
     }
@@ -43,10 +44,4 @@ object SearchModuleAssembler : Module() {
     )
 }
 
-abstract class SearchModuleBridge: ModuleBridge() {
-
-    @Suppress("Unused")
-    companion object {
-        fun searchPresenterFactoryInstance(): SearchPresenterFactory = instance()
-    }
-}
+abstract class SearchModuleBridge: ModuleBridge()

@@ -1,5 +1,6 @@
 import DivKit
 import LayoutKit
+import CommonUmbrella
 
 class DivCustomBlockFactoryImpl: DivCustomBlockFactory {
     

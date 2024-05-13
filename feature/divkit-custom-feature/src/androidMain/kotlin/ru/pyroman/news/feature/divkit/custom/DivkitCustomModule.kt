@@ -23,7 +23,7 @@ private class DivkitCustomModuleBridgeImpl : DivkitCustomModuleBridge() {
             provider {
                 SearchDivCustomViewAdapter(
                     context = contextInstance(),
-                    searchPresenterFactory = instance(),
+                    searchPresenterFactory = instance("SearchPresenterFactory"),
                 )
             }
 

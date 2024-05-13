@@ -29,7 +29,7 @@ class DivkitFragment : MvpFragment(), DivkitMvpView {
 
     private val divViewFactory: DivViewFactory = instance()
 
-    private val divkitPresenterFactory: DivkitPresenterFactory = instance()
+    private val divkitPresenterFactory: DivkitPresenterFactory = instance("DivkitPresenterFactory")
 
     private val args by parcelableArg<AndroidDivkitViewArgs>(ARGUMENTS)
 
