@@ -39,6 +39,7 @@ kotlin {
 
             export(projects.base.uikit)
             export(projects.feature.divkitFeature)
+            export(projects.feature.divkitCustomFeature)
             export(projects.feature.searchFeature)
         }
     }

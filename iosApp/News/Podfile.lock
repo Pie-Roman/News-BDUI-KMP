@@ -17,6 +17,12 @@ PODS:
     - VGSLBaseUI (~> 4.1)
   - DivKit_Serialization (29.15.1):
     - VGSLCommonCore (~> 4.1)
+  - DivkitCustomFeature (1.0):
+    - BaseUiKit
+    - CommonUmbrella
+    - DivKit (= 29.15.1)
+    - DivkitFeature
+    - SearchFeature
   - DivkitFeature (1.0):
     - BaseUiKit
     - CommonUmbrella
@@ -43,6 +49,7 @@ PODS:
 DEPENDENCIES:
   - BaseUiKit (from `./Modules/BaseUiKit`)
   - CommonUmbrella (from `../../common/umbrella`)
+  - DivkitCustomFeature (from `./Modules/DivkitCustomFeature`)
   - DivkitFeature (from `./Modules/DivkitFeature`)
   - SearchFeature (from `./Modules/SearchFeature`)
 
@@ -65,6 +72,8 @@ EXTERNAL SOURCES:
     :path: "./Modules/BaseUiKit"
   CommonUmbrella:
     :path: "../../common/umbrella"
+  DivkitCustomFeature:
+    :path: "./Modules/DivkitCustomFeature"
   DivkitFeature:
     :path: "./Modules/DivkitFeature"
   SearchFeature:
@@ -77,6 +86,7 @@ SPEC CHECKSUMS:
   DivKit_LayoutKit: d8cd3826a2d004b159517d514e1580467f89efc3
   DivKit_LayoutKitInterface: 805245d61e6525632171de529592afb880692cae
   DivKit_Serialization: 3921944d94687b824d79bad54ae9811326fc36ca
+  DivkitCustomFeature: 526a9a9beaa92df8f434707ddb303b3a7f5b0bd5
   DivkitFeature: 8317f72015cb2f411347548077a07e5b4c416e4c
   SearchFeature: 65365584c871e59b3e9bb8581ef4eef69de7d5c4
   VGSL_Fundamentals: 5967995b1ff711ef1fdd459bd07d0b2890478e5c
@@ -87,6 +97,6 @@ SPEC CHECKSUMS:
   VGSLCommonCore: 36d3b0cd249a982961bddbc9682286654e4b66c8
   VGSLNetworking: 1852dcdd30783aecdf83c57a5cb9ba7fab86b86b
 
-PODFILE CHECKSUM: 8051270533243cb01dbe20c0cec45e086528a2e8
+PODFILE CHECKSUM: 3da1e529fed348f03b4a890203f086cac17594a4
 
 COCOAPODS: 1.11.3

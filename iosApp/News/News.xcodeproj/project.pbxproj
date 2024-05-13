@@ -20,6 +20,10 @@
 		CCADDB6A2BE7DF99007C25E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */; };
 		CCADDB6C2BE7DF99007C25E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB6B2BE7DF99007C25E7 /* MainViewController.swift */; };
 		CCADDB712BE7DF9B007C25E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCADDB702BE7DF9B007C25E7 /* Assets.xcassets */; };
+		CCBA6CCF2BF2914700638F17 /* DivkitCustomFeature.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CCBA6CCE2BF2914700638F17 /* DivkitCustomFeature.podspec */; };
+		CCBA6D2E2BF2926200638F17 /* DivCustomBlockFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA6D2D2BF2926200638F17 /* DivCustomBlockFactoryImpl.swift */; };
+		CCBA6D302BF2945700638F17 /* DivkitCustomModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA6D2F2BF2945700638F17 /* DivkitCustomModule.swift */; };
+		CCBA6D322BF2957000638F17 /* DivCustomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA6D312BF2956F00638F17 /* DivCustomType.swift */; };
 		CCBC21E62BEE8DEC00C2FF25 /* DivkitFeature.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CCBC21E42BEE8DEC00C2FF25 /* DivkitFeature.podspec */; };
 		CCBC22DC2BEE922F00C2FF25 /* DivkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC22DB2BEE922F00C2FF25 /* DivkitViewController.swift */; };
 		CCBC22E02BEE926100C2FF25 /* DivDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC22DF2BEE926100C2FF25 /* DivDataParser.swift */; };
@@ -51,6 +55,10 @@
 		CCADDB6B2BE7DF99007C25E7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCADDB702BE7DF9B007C25E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCADDB752BE7DF9B007C25E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCBA6CCE2BF2914700638F17 /* DivkitCustomFeature.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DivkitCustomFeature.podspec; sourceTree = "<group>"; };
+		CCBA6D2D2BF2926200638F17 /* DivCustomBlockFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivCustomBlockFactoryImpl.swift; sourceTree = "<group>"; };
+		CCBA6D2F2BF2945700638F17 /* DivkitCustomModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivkitCustomModule.swift; sourceTree = "<group>"; };
+		CCBA6D312BF2956F00638F17 /* DivCustomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivCustomType.swift; sourceTree = "<group>"; };
 		CCBC21E42BEE8DEC00C2FF25 /* DivkitFeature.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DivkitFeature.podspec; sourceTree = "<group>"; };
 		CCBC22DB2BEE922F00C2FF25 /* DivkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivkitViewController.swift; sourceTree = "<group>"; };
 		CCBC22DF2BEE926100C2FF25 /* DivDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivDataParser.swift; sourceTree = "<group>"; };
@@ -143,6 +151,25 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		CCBA6CCD2BF290F200638F17 /* DivkitCustomFeature */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA6CD02BF2914B00638F17 /* Sources */,
+				CCBA6CCE2BF2914700638F17 /* DivkitCustomFeature.podspec */,
+			);
+			path = DivkitCustomFeature;
+			sourceTree = "<group>";
+		};
+		CCBA6CD02BF2914B00638F17 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA6D2D2BF2926200638F17 /* DivCustomBlockFactoryImpl.swift */,
+				CCBA6D2F2BF2945700638F17 /* DivkitCustomModule.swift */,
+				CCBA6D312BF2956F00638F17 /* DivCustomType.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		CCBC21E32BEE8DEC00C2FF25 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +207,7 @@
 		CCF22FE12BEAA736007ACA8D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CCBA6CCD2BF290F200638F17 /* DivkitCustomFeature */,
 				CC01C3FE2BF1F43B00417BB3 /* SearchFeature */,
 				CCBC21E52BEE8DEC00C2FF25 /* DivkitFeature */,
 				CCF22FE22BEAA746007ACA8D /* BaseUiKit */,
@@ -289,6 +317,7 @@
 				CCF22FDE2BEAA6E0007ACA8D /* common in Resources */,
 				CC01C4012BF1F58600417BB3 /* SearchFeature.podspec in Resources */,
 				CC7D33942BF028E5001515D8 /* domain in Resources */,
+				CCBA6CCF2BF2914700638F17 /* DivkitCustomFeature.podspec in Resources */,
 				CC7D33932BF028E5001515D8 /* data in Resources */,
 				CCF22FE62BEAA813007ACA8D /* BaseUiKit.podspec in Resources */,
 			);
@@ -343,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBA6D322BF2957000638F17 /* DivCustomType.swift in Sources */,
 				CCBC22E42BEE92E400C2FF25 /* IosDivkitViewArgs.swift in Sources */,
 				CC01C47A2BF24D1900417BB3 /* UIViewUtils.swift in Sources */,
 				CC01C4732BF1F60000417BB3 /* SearchModule.swift in Sources */,
@@ -352,11 +382,13 @@
 				CCBC22DC2BEE922F00C2FF25 /* DivkitViewController.swift in Sources */,
 				CC01C56E2BF25E9000417BB3 /* UIColorUtils.swift in Sources */,
 				CCBC22E22BEE929200C2FF25 /* DivKitComponentsFactory.swift in Sources */,
+				CCBA6D2E2BF2926200638F17 /* DivCustomBlockFactoryImpl.swift in Sources */,
 				CCBC22E62BEE92F800C2FF25 /* DivkitModule.swift in Sources */,
 				CCBC22E02BEE926100C2FF25 /* DivDataParser.swift in Sources */,
 				CCADDB6C2BE7DF99007C25E7 /* MainViewController.swift in Sources */,
 				CCADDB682BE7DF99007C25E7 /* AppDelegate.swift in Sources */,
 				CCADDB6A2BE7DF99007C25E7 /* SceneDelegate.swift in Sources */,
+				CCBA6D302BF2945700638F17 /* DivkitCustomModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
