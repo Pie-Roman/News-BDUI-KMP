@@ -29,6 +29,10 @@ fun DI.Builder.importAll(
     modules: List<DI.Module>,
 ) = importAll(modules)
 
+inline fun DirectDIAware.taggedInstance(
+    tag: Any?,
+) = instance<Any>(tag)
+
 inline fun DI.Builder.taggedProvider(
     tag: Any?,
     noinline creator: NoArgBindingDI<Any>.() -> Any,

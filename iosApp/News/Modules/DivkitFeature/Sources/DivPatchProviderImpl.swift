@@ -1,10 +1,3 @@
-//
-//  DivPatchProviderImpl.swift
-//  News
-//
-//  Created by Роман Ломтев on 11.05.2024.
-//
-
 import DivKit
 import CommonUmbrella
 import Serialization

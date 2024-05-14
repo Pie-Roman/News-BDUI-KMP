@@ -20,7 +20,7 @@ private class DivkitCustomModuleBridgeImpl: DivkitCustomModuleBridge {
         
         DIExtensionsKt.taggedProvider(builder, tag: "DivCustomBlockFactory") { directDIAware in
             DivCustomBlockFactoryImpl(
-                searchDivCustomBlockFactory: Inject.shared.taggedInstance(tag: "SearchDivCustomBlockFactory") as! SearchDivCustomBlockFactory
+                searchDivCustomBlockFactory: DIExtensionsKt.taggedInstance(directDIAware, tag: "SearchDivCustomBlockFactory") as! SearchDivCustomBlockFactory
             )
         }
     }
