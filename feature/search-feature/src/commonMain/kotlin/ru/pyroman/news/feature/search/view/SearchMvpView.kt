@@ -7,6 +7,8 @@ import ru.pyroman.news.feature.search.presenter.SearchPresenter
 
 interface SearchMvpView : MvpView {
 
+    fun observeSearchInput(searchInput: String)
+
     fun registerOnSearchInput(onSearchInput: (String) -> Unit)
 
     fun registerOnCancelClick(onCancelClick: () -> Unit)

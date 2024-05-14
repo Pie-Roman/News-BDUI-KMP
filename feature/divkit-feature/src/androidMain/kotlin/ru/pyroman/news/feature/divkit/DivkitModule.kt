@@ -2,6 +2,7 @@ package ru.pyroman.news.feature.divkit
 
 import com.yandex.div.core.DivCustomContainerViewAdapter
 import com.yandex.div.core.downloader.DivDownloader
+import com.yandex.div.core.expression.variables.DivVariableController
 import com.yandex.div.data.DivParsingEnvironment
 import com.yandex.div.json.ParsingErrorLogger
 import org.kodein.di.DI
@@ -46,6 +47,7 @@ private class DivkitModuleBridgeImpl : DivkitModuleBridge() {
                     imageLoaderFactory = instance(),
                     divDownloader = instance(),
                     divCustomContainerViewAdapter = instance(),
+                    divVariableController = instance(),
                 )
             }
 
@@ -72,6 +74,10 @@ private class DivkitModuleBridgeImpl : DivkitModuleBridge() {
                     getViewPatchDataUseCase = instance("GetViewPatchDataUseCase"),
                     environment = instance(),
                 )
+            }
+
+            singleton {
+                DivVariableController()
             }
         }
     }

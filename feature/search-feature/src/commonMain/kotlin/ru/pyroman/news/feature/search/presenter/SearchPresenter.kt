@@ -19,6 +19,15 @@ class SearchPresenter : BaseMvpPresenter<SearchMvpView>() {
                 }
             )
         }
+
+        launch(
+            block =  {
+                useCases.observeSearchInput { searchInput ->
+                    view?.observeSearchInput(searchInput)
+                }
+            }
+        )
+
         view?.registerOnCancelClick {
             view?.clearSearchInput()
         }

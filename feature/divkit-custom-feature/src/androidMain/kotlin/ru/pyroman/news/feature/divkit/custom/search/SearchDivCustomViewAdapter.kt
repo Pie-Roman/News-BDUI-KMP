@@ -5,6 +5,9 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.widget.addTextChangedListener
+import com.yandex.div.core.expression.variables.DivVariableController
+import com.yandex.div.core.view2.Div2View
+import com.yandex.div.data.Variable
 import com.yandex.div2.DivCustom
 import ru.pyroman.mvpkmp.MvpDelegate.Companion.mvpDelegate
 import ru.pyroman.news.feature.divkit.custom.DivCustomType
@@ -16,6 +19,7 @@ import ru.pyroman.news.feature.search.view.SearchMvpView
 class SearchDivCustomViewAdapter(
     private val context: Context,
     private val searchPresenterFactory: SearchPresenterFactory,
+    private val divVariableController: DivVariableController,
 ) : MvpDivCustomViewAdapter<View>(), SearchMvpView {
 
     override val customType = DivCustomType.SEARCH.customType
@@ -23,6 +27,8 @@ class SearchDivCustomViewAdapter(
     override val mvpDelegate = mvpDelegate {
         searchPresenterFactory.create()
     }
+
+    private var searchInputVariableName: String? = null
 
     private var _binding: ViewSearchBinding? = null
     private val binding: ViewSearchBinding
@@ -34,6 +40,23 @@ class SearchDivCustomViewAdapter(
         return ViewSearchBinding.inflate(LayoutInflater.from(this.context)).apply {
             _binding = this
         }.root
+    }
+
+    override fun bindView(view: View, div: DivCustom, divView: Div2View) {
+        super.bindView(view, div, divView)
+        searchInputVariableName = div.customProps?.optString("keySearchInput")
+    }
+
+    override fun observeSearchInput(searchInput: String) {
+        searchInputVariableName?.let { variableName ->
+            divVariableController.putOrUpdate(
+                Variable.StringVariable(
+                    name = variableName,
+                    defaultValue = searchInput,
+                )
+            )
+        }
+
     }
 
     override fun registerOnSearchInput(onSearchInput: (String) -> Unit) = with(binding) {

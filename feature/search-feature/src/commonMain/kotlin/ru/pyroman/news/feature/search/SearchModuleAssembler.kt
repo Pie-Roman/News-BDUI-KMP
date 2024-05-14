@@ -25,6 +25,7 @@ object SearchModuleAssembler : Module() {
         provider {
            SearchUseCases(
                setSearchInputUseCase = instance(),
+               observeSearchInputUseCase = instance(),
            )
         }
 
