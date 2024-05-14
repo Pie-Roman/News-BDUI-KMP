@@ -12,7 +12,7 @@ internal class SearchUseCases(
         return setSearchInputUseCase.execute(searchInput)
     }
 
-    suspend fun observeSearchInput(observer: (String) -> Unit) {
+    suspend fun observeSearchInput(observer: suspend (String) -> Unit) {
         return observeSearchInputUseCase.execute(observer)
     }
 }

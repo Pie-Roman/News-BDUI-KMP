@@ -1,5 +1,7 @@
 package ru.pyroman.news.feature.search.presenter
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import ru.pyroman.news.base.uikit.presenter.BaseMvpPresenter
 import ru.pyroman.news.common.core.di.Inject.instance
 import ru.pyroman.news.feature.search.usecases.SearchUseCases
@@ -23,7 +25,9 @@ class SearchPresenter : BaseMvpPresenter<SearchMvpView>() {
         launch(
             block =  {
                 useCases.observeSearchInput { searchInput ->
-                    view?.observeSearchInput(searchInput)
+                    withContext(Dispatchers.Main) {
+                        view?.observeSearchInput(searchInput)
+                    }
                 }
             }
         )

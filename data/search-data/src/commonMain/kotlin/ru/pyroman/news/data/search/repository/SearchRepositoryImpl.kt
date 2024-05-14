@@ -11,7 +11,7 @@ internal class SearchRepositoryImpl(
         return cacheDataSource.setSearchInput(searchInput)
     }
 
-    override suspend fun observeSearchInput(observer: (String) -> Unit) {
+    override suspend fun observeSearchInput(observer: suspend (String) -> Unit) {
         return cacheDataSource.observeSearchInput(observer)
     }
 }
