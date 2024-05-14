@@ -7,8 +7,10 @@ public class SearchDivCustomBlockFactory: DivCustomBlockFactory {
     
     public func makeBlock(data: DivCustomData, context: DivBlockModelingContext) -> Block {
         
-        let view = SearchView()
+        let view = SearchView(frame: .zero)
+        let block = GenericViewBlock(view: view)
+        block.configureBlockView(<#T##view: any BlockView##any BlockView#>, observer: <#T##(any ElementStateObserver)?#>, overscrollDelegate: <#T##(any ScrollDelegate)?#>, renderingDelegate: <#T##(any RenderingDelegate)?#>)
         
-        return GenericViewBlock(view: view)
+        return block
     }
 }

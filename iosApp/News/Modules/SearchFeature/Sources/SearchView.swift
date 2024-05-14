@@ -7,8 +7,8 @@ public class SearchView: UIStackView {
     private let searchTf = UITextField()
     private let cancelIv = UIImageView()
     
-    public init() {
-        super.init(frame: .zero)
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         setupView()
     }
     
@@ -20,6 +20,7 @@ public class SearchView: UIStackView {
         axis = .horizontal
         backgroundColor = UIColor(hex: "#EEEEEE")
         layer.cornerRadius = 20
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         addSubview(searchIv)
         searchIv.image = UIImage(named: "ic_search")

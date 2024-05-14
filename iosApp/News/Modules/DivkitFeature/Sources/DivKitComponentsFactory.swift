@@ -9,6 +9,7 @@ internal class DivKitComponentsFactory {
     
     func create() -> DivKitComponents {
         let divkitComponents = DivKitComponents(
+            divCustomBlockFactory: divCustomBlockFactory,
             patchProvider: divPatchProvider
         )
         

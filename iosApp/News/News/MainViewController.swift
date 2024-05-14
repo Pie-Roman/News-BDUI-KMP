@@ -1,6 +1,5 @@
 import UIKit
 import DivkitFeature
-import SearchFeature
 
 class MainViewController: UIViewController {
 
