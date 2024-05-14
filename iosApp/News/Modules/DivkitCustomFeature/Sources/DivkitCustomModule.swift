@@ -17,8 +17,10 @@ private class DivkitCustomModuleBridgeImpl: DivkitCustomModuleBridge {
     
     override func provideNativeInstances(builder: any DIBuilder) {
         
-        DIExtensionsKt.taggedProvider(builder, tag: "SearchDivCustomBlockFactory") { _ in
-            SearchDivCustomBlockFactory()
+        DIExtensionsKt.taggedProvider(builder, tag: "SearchDivCustomBlockFactory") { directDIAware in
+            SearchDivCustomBlockFactory(
+                observeSearchInputUseCase: DIExtensionsKt.taggedInstance(directDIAware, tag: "ObserveSearchInputUseCase") as! ObserveSearchInputUseCase
+            )
         }
         
         DIExtensionsKt.taggedProvider(builder, tag: "DivCustomBlockFactory") { directDIAware in

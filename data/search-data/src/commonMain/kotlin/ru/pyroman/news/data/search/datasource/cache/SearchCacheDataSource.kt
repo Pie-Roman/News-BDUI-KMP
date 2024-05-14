@@ -11,7 +11,7 @@ internal class SearchCacheDataSource {
         searchInputFlow.emit(searchInput)
     }
 
-    suspend fun observeSearchInput(observer: suspend (String) -> Unit) {
+    suspend fun observeSearchInput(observer: (String) -> Unit) {
         searchInputFlow
             .debounce(timeoutMillis = 500L)
             .collect { searchInput ->

@@ -14,7 +14,9 @@ val searchDomainCommonModule = module("searchDomainCommonModule") {
         )
     }
 
-    provider {
+    provider(
+        tag = "ObserveSearchInputUseCase"
+    ) {
         ObserveSearchInputUseCase(
             searchRepository = instance(),
         )

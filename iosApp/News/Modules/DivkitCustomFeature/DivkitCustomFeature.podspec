@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Divkit custom feature module'
-    spec.ios.deployment_target = '12.0'
+    spec.ios.deployment_target = '13.0'
     spec.public_header_files = 'Sources/**/*.h'
     spec.source_files            = [
       'Sources/**/*.{swift,h,m}'

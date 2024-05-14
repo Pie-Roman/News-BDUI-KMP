@@ -6,7 +6,7 @@ class ObserveSearchInputUseCase internal constructor(
     private val searchRepository: SearchRepository,
 ) {
 
-    suspend fun execute(observer: suspend (String) -> Unit) {
+    suspend fun execute(observer: (String) -> Unit) {
         return searchRepository.observeSearchInput(observer)
     }
 }
