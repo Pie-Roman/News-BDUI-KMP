@@ -1,7 +1,7 @@
 package ru.pyroman.news.feature.search
 
 import org.kodein.di.DI
-import ru.pyroman.news.common.core.di.Inject.instance
+import org.kodein.di.instance
 import ru.pyroman.news.common.core.di.module
 import ru.pyroman.news.common.core.di.module.Module
 import ru.pyroman.news.common.core.di.module.ModuleBridge

@@ -10,7 +10,7 @@ import ru.pyroman.news.domain.search.repository.SearchRepository
 
 val searchDataCommonModule = module("searchDataCommonModule") {
 
-    singleton<SearchCacheDataSource> {
+    singleton {
         SearchCacheDataSource()
     }
 
