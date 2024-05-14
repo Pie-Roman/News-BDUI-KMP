@@ -8,7 +8,7 @@ public class SearchView: UIStackView {
     private let cancelIv = UIImageView()
     
     public override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: .zero)
         setupView()
     }
     
