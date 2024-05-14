@@ -13,6 +13,7 @@
 		CC01C47A2BF24D1900417BB3 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01C4792BF24D1900417BB3 /* UIViewUtils.swift */; };
 		CC01C56E2BF25E9000417BB3 /* UIColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01C56D2BF25E9000417BB3 /* UIColorUtils.swift */; };
 		CC26EBC42BEFEEE000C17F0F /* DivPatchProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26EBC32BEFEEE000C17F0F /* DivPatchProviderImpl.swift */; };
+		CC4747FD2BF3FCA800A98D97 /* MvpUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4747FC2BF3FCA800A98D97 /* MvpUIView.swift */; };
 		CC7D33932BF028E5001515D8 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33902BF028E5001515D8 /* data */; };
 		CC7D33942BF028E5001515D8 /* domain in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33912BF028E5001515D8 /* domain */; };
 		CC7D33952BF028E5001515D8 /* feature in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33922BF028E5001515D8 /* feature */; };
@@ -47,6 +48,7 @@
 		CC01C4792BF24D1900417BB3 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CC01C56D2BF25E9000417BB3 /* UIColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorUtils.swift; sourceTree = "<group>"; };
 		CC26EBC32BEFEEE000C17F0F /* DivPatchProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivPatchProviderImpl.swift; sourceTree = "<group>"; };
+		CC4747FC2BF3FCA800A98D97 /* MvpUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvpUIView.swift; sourceTree = "<group>"; };
 		CC7D33902BF028E5001515D8 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../data; sourceTree = "<group>"; };
 		CC7D33912BF028E5001515D8 /* domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = domain; path = ../../../domain; sourceTree = "<group>"; };
 		CC7D33922BF028E5001515D8 /* feature */ = {isa = PBXFileReference; lastKnownFileType = folder; name = feature; path = ../../../feature; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				CCF22FF02BEAA8B1007ACA8D /* MvpViewController.swift */,
+				CC4747FC2BF3FCA800A98D97 /* MvpUIView.swift */,
 			);
 			path = Mvp;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				CCBC22E02BEE926100C2FF25 /* DivDataParser.swift in Sources */,
 				CCADDB6C2BE7DF99007C25E7 /* MainViewController.swift in Sources */,
 				CCADDB682BE7DF99007C25E7 /* AppDelegate.swift in Sources */,
+				CC4747FD2BF3FCA800A98D97 /* MvpUIView.swift in Sources */,
 				CCADDB6A2BE7DF99007C25E7 /* SceneDelegate.swift in Sources */,
 				CCBA6D302BF2945700638F17 /* DivkitCustomModule.swift in Sources */,
 			);

@@ -1,10 +1,13 @@
 import CommonUmbrella
+import SearchFeature
 
 public let divkitCustomModule = makeDivkitCustomModule()
 
 private func makeDivkitCustomModule() -> DIModule {
     DivkitCustomModuleAssembler.shared.assembleModule(
-        childModules: [],
+        childModules: [
+            searchModule
+        ],
         bridge: DivkitCustomModuleBridgeImpl()
     )
     return DivkitCustomModuleAssembler.shared.instance
