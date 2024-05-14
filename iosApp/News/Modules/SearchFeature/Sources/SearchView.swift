@@ -1,13 +1,13 @@
 import UIKit
 import BaseUiKit
 
-class SearchView: UIStackView {
+public class SearchView: UIStackView {
     
     private let searchIv = UIImageView()
     private let searchTf = UITextField()
     private let cancelIv = UIImageView()
     
-    init() {
+    public init() {
         super.init(frame: .zero)
         setupView()
     }

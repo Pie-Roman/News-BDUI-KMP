@@ -14,8 +14,14 @@ private class DivkitCustomModuleBridgeImpl: DivkitCustomModuleBridge {
     
     override func provideNativeInstances(builder: any DIBuilder) {
         
-        DIExtensionsKt.taggedProvider(builder, tag: "DivCustomBlockFactory") { _ in
-            DivCustomBlockFactoryImpl()
+        DIExtensionsKt.taggedProvider(builder, tag: "SearchDivCustomBlockFactory") { _ in
+            SearchDivCustomBlockFactory()
+        }
+        
+        DIExtensionsKt.taggedProvider(builder, tag: "DivCustomBlockFactory") { directDIAware in
+            DivCustomBlockFactoryImpl(
+                searchDivCustomBlockFactory: Inject.shared.taggedInstance(tag: "SearchDivCustomBlockFactory") as! SearchDivCustomBlockFactory
+            )
         }
     }
 }

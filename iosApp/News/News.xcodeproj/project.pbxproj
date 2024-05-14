@@ -16,6 +16,7 @@
 		CC7D33932BF028E5001515D8 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33902BF028E5001515D8 /* data */; };
 		CC7D33942BF028E5001515D8 /* domain in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33912BF028E5001515D8 /* domain */; };
 		CC7D33952BF028E5001515D8 /* feature in Resources */ = {isa = PBXBuildFile; fileRef = CC7D33922BF028E5001515D8 /* feature */; };
+		CCA04AC52BF3495100725BDA /* SearchDivCustomBlockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA04AC42BF3495100725BDA /* SearchDivCustomBlockFactory.swift */; };
 		CCADDB682BE7DF99007C25E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB672BE7DF99007C25E7 /* AppDelegate.swift */; };
 		CCADDB6A2BE7DF99007C25E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */; };
 		CCADDB6C2BE7DF99007C25E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADDB6B2BE7DF99007C25E7 /* MainViewController.swift */; };
@@ -49,6 +50,7 @@
 		CC7D33902BF028E5001515D8 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../data; sourceTree = "<group>"; };
 		CC7D33912BF028E5001515D8 /* domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = domain; path = ../../../domain; sourceTree = "<group>"; };
 		CC7D33922BF028E5001515D8 /* feature */ = {isa = PBXFileReference; lastKnownFileType = folder; name = feature; path = ../../../feature; sourceTree = "<group>"; };
+		CCA04AC42BF3495100725BDA /* SearchDivCustomBlockFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDivCustomBlockFactory.swift; sourceTree = "<group>"; };
 		CCADDB642BE7DF99007C25E7 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCADDB672BE7DF99007C25E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCADDB692BE7DF99007C25E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CCA04AC32BF3493A00725BDA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CCA04AC42BF3495100725BDA /* SearchDivCustomBlockFactory.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		CCADDB5B2BE7DF99007C25E7 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		CCBA6CD02BF2914B00638F17 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CCA04AC32BF3493A00725BDA /* Search */,
 				CCBA6D2D2BF2926200638F17 /* DivCustomBlockFactoryImpl.swift */,
 				CCBA6D2F2BF2945700638F17 /* DivkitCustomModule.swift */,
 				CCBA6D312BF2956F00638F17 /* DivCustomType.swift */,
@@ -381,6 +392,7 @@
 				CC01C4752BF1F60900417BB3 /* SearchView.swift in Sources */,
 				CCBC22DC2BEE922F00C2FF25 /* DivkitViewController.swift in Sources */,
 				CC01C56E2BF25E9000417BB3 /* UIColorUtils.swift in Sources */,
+				CCA04AC52BF3495100725BDA /* SearchDivCustomBlockFactory.swift in Sources */,
 				CCBC22E22BEE929200C2FF25 /* DivKitComponentsFactory.swift in Sources */,
 				CCBA6D2E2BF2926200638F17 /* DivCustomBlockFactoryImpl.swift in Sources */,
 				CCBC22E62BEE92F800C2FF25 /* DivkitModule.swift in Sources */,
