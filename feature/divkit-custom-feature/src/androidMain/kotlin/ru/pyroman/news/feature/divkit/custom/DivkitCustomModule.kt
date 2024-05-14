@@ -24,7 +24,7 @@ private class DivkitCustomModuleBridgeImpl : DivkitCustomModuleBridge() {
                 SearchDivCustomViewAdapter(
                     context = contextInstance(),
                     searchPresenterFactory = instance("SearchPresenterFactory"),
-                    globalVariableController = instance(),
+                    divVariableController = instance(),
                 )
             }
 
