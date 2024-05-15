@@ -24,7 +24,7 @@ class SearchDivCustomViewAdapter(
 
     override val customType = DivCustomType.SEARCH.customType
 
-    override val mvpDelegate = mvpDelegate {
+    override fun provideMvpDelegate() = mvpDelegate {
         searchPresenterFactory.create()
     }
 
@@ -53,6 +53,10 @@ class SearchDivCustomViewAdapter(
                 Variable.StringVariable(
                     name = variableName,
                     defaultValue = searchInput,
+                ),
+                Variable.BooleanVariable(
+                    name = "searchInputTriggered",
+                    defaultValue = true,
                 )
             )
         }

@@ -9,10 +9,9 @@ class SearchPresenter : BaseMvpPresenter<SearchMvpView>() {
 
     private val useCases: SearchUseCases = instance()
 
-    override fun onFirstViewAttach() {
-        super.onFirstViewAttach()
-
-        view?.registerOnSearchInput { searchInput ->
+    override fun attachView(view: SearchMvpView) {
+        super.attachView(view)
+        view.registerOnSearchInput { searchInput ->
             launch(
                 block = {
                     useCases.setSearchInput(searchInput)
@@ -23,13 +22,13 @@ class SearchPresenter : BaseMvpPresenter<SearchMvpView>() {
         launch(
             block =  {
                 useCases.observeSearchInput { searchInput ->
-                    view?.observeSearchInput(searchInput)
+                    view.observeSearchInput(searchInput)
                 }
             }
         )
 
-        view?.registerOnCancelClick {
-            view?.clearSearchInput()
+        view.registerOnCancelClick {
+            view.clearSearchInput()
         }
     }
 

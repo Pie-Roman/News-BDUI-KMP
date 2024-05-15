@@ -33,6 +33,7 @@ internal class GlideDivImageLoader(
             .skipMemoryCache(false)
             .diskCacheStrategy(DiskCacheStrategy.DATA)
             .listener(callback.wrap { resource, from -> CachedBitmap(resource, uri, from) })
+            .error(com.yandex.div.R.drawable.div_button_background)
             .into(NoopTarget())
         return LoadReference { glide.clear(target) }
     }

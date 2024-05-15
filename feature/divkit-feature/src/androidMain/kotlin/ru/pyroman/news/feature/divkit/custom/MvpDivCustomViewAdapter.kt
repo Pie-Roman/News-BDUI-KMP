@@ -8,17 +8,21 @@ import ru.pyroman.mvpkmp.MvpView
 
 abstract class MvpDivCustomViewAdapter<T : View> : AbstractDivCustomViewAdapter<T>(), MvpView {
 
-    protected abstract val mvpDelegate: MvpDelegate<*>
+    protected abstract fun provideMvpDelegate(): MvpDelegate<*>
+
+    private var mvpDelegate: MvpDelegate<*>? = null
 
     override fun bindView(view: T, div: DivCustom, divView: Div2View) {
         super.bindView(view, div, divView)
-        mvpDelegate.onCreate()
-        mvpDelegate.onAttach()
+        mvpDelegate = provideMvpDelegate().apply {
+            onCreate()
+            onAttach()
+        }
     }
 
     override fun releaseView(view: T, div: DivCustom) {
         super.releaseView(view, div)
-        mvpDelegate.onDetach()
-        mvpDelegate.onDestroy()
+        mvpDelegate?.onDetach()
+        mvpDelegate?.onDestroy()
     }
 }
