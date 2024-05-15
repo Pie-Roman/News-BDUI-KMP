@@ -11,11 +11,17 @@ interface SearchMvpView : MvpView {
 
     fun registerOnSearchInput(onSearchInput: (String) -> Unit)
 
+    fun registerOnSearchClick(onSearchClick: () -> Unit)
+
     fun registerOnCancelClick(onCancelClick: () -> Unit)
 
     fun unregisterOnSearchInput()
 
+    fun unregisterOnSearchClick()
+
     fun unregisterOnCancelClick()
+
+    fun focusSearchInput()
 
     fun clearSearchInput()
 

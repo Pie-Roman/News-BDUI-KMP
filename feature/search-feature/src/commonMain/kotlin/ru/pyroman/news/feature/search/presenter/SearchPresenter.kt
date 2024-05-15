@@ -30,10 +30,15 @@ class SearchPresenter : BaseMvpPresenter<SearchMvpView>() {
         view.registerOnCancelClick {
             view.clearSearchInput()
         }
+
+        view.registerOnSearchClick {
+            view.focusSearchInput()
+        }
     }
 
     override fun detachView() {
         view?.unregisterOnSearchInput()
+        view?.unregisterOnSearchClick()
         view?.unregisterOnCancelClick()
         super.detachView()
     }

@@ -4,11 +4,12 @@ import CommonUmbrella
 
 public class SearchView: MvpUIView, SearchMvpView {
     
-    private let searchIv = UIImageView()
+    private let searchB = UIButton()
     private let searchTf = UITextField()
     private let cancelB = UIButton()
     
     private var onSearchInput: ((String) -> Void)? = nil
+    private var onSearchClick: (() -> Void)? = nil
     private var onCancelClick: (() -> Void)? = nil
     
     private let searchPresenterFactory = Inject.shared.taggedInstance(tag: "SearchPresenterFactory") as! SearchPresenterFactory
@@ -33,10 +34,19 @@ public class SearchView: MvpUIView, SearchMvpView {
         searchTf.addTarget(self, action: #selector(searchTfTextChanged), for: .editingChanged)
     }
     
+    public func registerOnSearchClick(onSearchClick: @escaping () -> Void) {
+        self.onSearchClick = onSearchClick
+        searchB.addTarget(searchTf, action: #selector(becomeFirstResponder), for: .touchUpInside)
+    }
+    
+    
     public func registerOnCancelClick(onCancelClick: @escaping () -> Void) {
         self.onCancelClick = onCancelClick
         cancelB.addTarget(self, action: #selector(cancelBClicked), for: .touchUpInside)
-        
+    }
+    
+    public func unregisterOnSearchClick() {
+        self.onSearchClick = nil
     }
     
     public func unregisterOnSearchInput() {
@@ -45,6 +55,10 @@ public class SearchView: MvpUIView, SearchMvpView {
     
     public func unregisterOnCancelClick() {
         self.onCancelClick = nil
+    }
+    
+    public func focusSearchInput() {
+        becomeFirstResponder()
     }
     
     public func clearSearchInput() {
@@ -60,11 +74,11 @@ public class SearchView: MvpUIView, SearchMvpView {
         layer.cornerRadius = 20
         autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        addSubview(searchIv)
-        searchIv.image = UIImage(named: "ic_search")
-        searchIv.pinLeading(to: self, 20)
-        searchIv.pinTop(to: self, 11)
-        searchIv.pinBottom(to: self, 11)
+        addSubview(searchB)
+        searchB.setImage(UIImage(named: "ic_search"), for: .normal)
+        searchB.pinLeading(to: self, 20)
+        searchB.pinTop(to: self, 11)
+        searchB.pinBottom(to: self, 11)
         
         addSubview(cancelB)
         cancelB.setImage(UIImage(named: "ic_cancel"), for: .normal)
@@ -73,7 +87,7 @@ public class SearchView: MvpUIView, SearchMvpView {
         cancelB.pinBottom(to: self, 10)
         
         addSubview(searchTf)
-        searchTf.pinLeading(to: searchIv.trailingAnchor, 10)
+        searchTf.pinLeading(to: searchB.trailingAnchor, 10)
         searchTf.pinTop(to: self, 11)
         searchTf.pinBottom(to: self, 11)
     }
@@ -86,6 +100,15 @@ public class SearchView: MvpUIView, SearchMvpView {
         else { return }
         
         onSearchInput(searchInput)
+    }
+    
+    @objc
+    private func searchBClicked() {
+        guard
+            let onSearchClick = self.onSearchClick
+        else { return }
+        
+        onSearchClick()
     }
     
     @objc

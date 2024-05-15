@@ -86,7 +86,7 @@ SPEC CHECKSUMS:
   DivKit_LayoutKit: d8cd3826a2d004b159517d514e1580467f89efc3
   DivKit_LayoutKitInterface: 805245d61e6525632171de529592afb880692cae
   DivKit_Serialization: 3921944d94687b824d79bad54ae9811326fc36ca
-  DivkitCustomFeature: 526a9a9beaa92df8f434707ddb303b3a7f5b0bd5
+  DivkitCustomFeature: 8dbbf25134255f0578d631b5cfe0b859c11576c4
   DivkitFeature: 8317f72015cb2f411347548077a07e5b4c416e4c
   SearchFeature: 65365584c871e59b3e9bb8581ef4eef69de7d5c4
   VGSL_Fundamentals: 5967995b1ff711ef1fdd459bd07d0b2890478e5c

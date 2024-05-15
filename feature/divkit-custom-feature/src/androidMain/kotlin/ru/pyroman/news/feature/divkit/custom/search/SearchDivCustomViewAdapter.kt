@@ -29,6 +29,7 @@ class SearchDivCustomViewAdapter(
     }
 
     private var searchInputVariableName: String? = null
+    private var searchInputTriggeredVariableName: String? = null
 
     private var _binding: ViewSearchBinding? = null
     private val binding: ViewSearchBinding
@@ -45,28 +46,33 @@ class SearchDivCustomViewAdapter(
     override fun bindView(view: View, div: DivCustom, divView: Div2View) {
         super.bindView(view, div, divView)
         searchInputVariableName = div.customProps?.optString("keySearchInput")
+        searchInputTriggeredVariableName = div.customProps?.optString("keySearchInputTriggered")
     }
 
     override fun observeSearchInput(searchInput: String) {
-        searchInputVariableName?.let { variableName ->
-            divVariableController.putOrUpdate(
-                Variable.StringVariable(
-                    name = variableName,
-                    defaultValue = searchInput,
-                ),
-                Variable.BooleanVariable(
-                    name = "searchInputTriggered",
-                    defaultValue = true,
-                )
-            )
-        }
+        val searchInputVariableName = this.searchInputVariableName ?: return
+        val searchInputTriggeredVariableName = this.searchInputTriggeredVariableName ?: return
 
+        divVariableController.putOrUpdate(
+            Variable.StringVariable(
+                name = searchInputVariableName,
+                defaultValue = searchInput,
+            ),
+            Variable.BooleanVariable(
+                name = searchInputTriggeredVariableName,
+                defaultValue = true,
+            )
+        )
     }
 
     override fun registerOnSearchInput(onSearchInput: (String) -> Unit) = with(binding) {
         searchInputTextWatcher = searchTv.addTextChangedListener { searchInput ->
             onSearchInput(searchInput?.toString().orEmpty())
         }
+    }
+
+    override fun registerOnSearchClick(onSearchClick: () -> Unit) = with(binding) {
+        searchIv.setOnClickListener { onSearchClick() }
     }
 
     override fun registerOnCancelClick(onCancelClick: () -> Unit) = with(binding) {
@@ -78,8 +84,16 @@ class SearchDivCustomViewAdapter(
         searchInputTextWatcher = null
     }
 
+    override fun unregisterOnSearchClick() = with(binding) {
+        searchIv.setOnClickListener(null)
+    }
+
     override fun unregisterOnCancelClick() = with(binding) {
         cancelIv.setOnClickListener(null)
+    }
+
+    override fun focusSearchInput() = with(binding) {
+        searchTv.requestFocus().let {  }
     }
 
     override fun clearSearchInput() = with(binding) {
