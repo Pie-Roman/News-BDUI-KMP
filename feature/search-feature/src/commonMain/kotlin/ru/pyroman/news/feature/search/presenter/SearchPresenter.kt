@@ -11,7 +11,7 @@ class SearchPresenter : BaseMvpPresenter<SearchMvpView>() {
 
     override fun attachView(view: SearchMvpView) {
         super.attachView(view)
-        view.registerOnSearchInput { searchInput ->
+        this.view?.registerOnSearchInput { searchInput ->
             launch(
                 block = {
                     useCases.setSearchInput(searchInput)
@@ -22,17 +22,17 @@ class SearchPresenter : BaseMvpPresenter<SearchMvpView>() {
         launch(
             block =  {
                 useCases.observeSearchInput { searchInput ->
-                    view.observeSearchInput(searchInput)
+                    this@SearchPresenter.view?.observeSearchInput(searchInput)
                 }
             }
         )
 
-        view.registerOnCancelClick {
-            view.clearSearchInput()
+        this.view?.registerOnCancelClick {
+            this.view?.clearSearchInput()
         }
 
-        view.registerOnSearchClick {
-            view.focusSearchInput()
+        this.view?.registerOnSearchClick {
+            this.view?.focusSearchInput()
         }
     }
 
