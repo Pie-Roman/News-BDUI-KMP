@@ -9,7 +9,7 @@ import com.yandex.div.core.expression.variables.DivVariableController
 import com.yandex.div.core.view2.Div2View
 import com.yandex.div.data.Variable
 import com.yandex.div2.DivCustom
-import ru.pyroman.mvpkmp.MvpDelegate.Companion.mvpDelegate
+import ru.pyroman.news.base.uikit.mvp.MvpDelegate.Companion.mvpDelegate
 import ru.pyroman.news.feature.divkit.custom.DivCustomType
 import ru.pyroman.news.feature.divkit.custom.MvpDivCustomViewAdapter
 import ru.pyroman.news.feature.search.databinding.ViewSearchBinding

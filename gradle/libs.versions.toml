@@ -7,8 +7,6 @@ androidx-appCompat = "1.6.1"
 androidx-fragmentKtx = "1.5.7"
 androidx-constraintLayout = "2.1.4"
 
-pyroman-mvpkmp = "1.0.2"
-
 kotlinx-coroutines-core = "1.7.3"
 kotlinx-serialization = "1.5.1"
 
@@ -28,8 +26,6 @@ androidx-constraintLayout = { module = "androidx.constraintlayout:constraintlayo
 
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
-
-pyroman-mvpkmp = { module = "ru.pyroman.mvpkmp:mvpkmp", version.ref = "pyroman-mvpkmp" }
 
 kodein = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
 

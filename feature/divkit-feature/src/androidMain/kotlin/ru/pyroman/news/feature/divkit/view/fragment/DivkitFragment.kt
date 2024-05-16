@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import ru.pyroman.news.feature.divkit.divview.DivViewFactory
 import ru.pyroman.news.feature.divkit.view.args.AndroidDivkitViewArgs
-import ru.pyroman.mvpkmp.MvpDelegate.Companion.mvpDelegate
-import ru.pyroman.mvpkmp.fragment.MvpFragment
+import ru.pyroman.news.base.uikit.mvp.MvpDelegate.Companion.mvpDelegate
+import ru.pyroman.news.base.uikit.mvp.MvpFragment
 import ru.pyroman.news.base.uikit.utils.parcelableArg
 import ru.pyroman.news.common.core.di.Inject.instance
 import ru.pyroman.news.domain.divkit.model.ViewData

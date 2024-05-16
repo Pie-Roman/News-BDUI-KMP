@@ -1,4 +1,4 @@
-package ru.pyroman.news.base.uikit.presenter
+package ru.pyroman.news.base.uikit.mvp
 
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
@@ -8,8 +8,6 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.pyroman.mvpkmp.MvpPresenter
-import ru.pyroman.mvpkmp.MvpView
 import kotlin.coroutines.CoroutineContext
 
 open class BaseMvpPresenter<View : MvpView> : MvpPresenter<View>() {

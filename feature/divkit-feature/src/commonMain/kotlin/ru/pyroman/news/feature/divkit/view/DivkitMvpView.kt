@@ -1,8 +1,8 @@
 package ru.pyroman.news.feature.divkit.view
 
-import ru.pyroman.mvpkmp.MvpDelegate
-import ru.pyroman.mvpkmp.MvpDelegate.Companion.mvpDelegate
-import ru.pyroman.mvpkmp.MvpView
+import ru.pyroman.news.base.uikit.mvp.MvpDelegate
+import ru.pyroman.news.base.uikit.mvp.MvpDelegate.Companion.mvpDelegate
+import ru.pyroman.news.base.uikit.mvp.MvpView
 import ru.pyroman.news.domain.divkit.model.ViewData
 import ru.pyroman.news.feature.divkit.presenter.DivkitPresenter
 

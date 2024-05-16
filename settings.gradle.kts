@@ -16,14 +16,12 @@ pluginManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
-        mavenLocal()
     }
 }
 
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
-        mavenLocal()
         google()
     }
 }
