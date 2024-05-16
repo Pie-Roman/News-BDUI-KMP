@@ -1,6 +1,7 @@
 import UIKit
 import CommonUmbrella
 import DivkitFeature
+import DivkitCustomFeature
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,9 +12,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let iosUmbrellaModule = DIExtensionsKt.module(name: "iosUmbrellaModule") { diBuilder in
+            DIExtensionsKt.importAll(diBuilder, modules: [
+                divkitModule,
+                divkitCustomModule
+            ])
+        }
+        
         PlatformSDK.shared.doInitPlatform(
             configuration: IosPlatformConfiguration(),
-            platformModule: divkitModule
+            platformModule: iosUmbrellaModule
         )
         return true
     }

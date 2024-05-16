@@ -13,10 +13,12 @@ end
 
 target 'News' do
   project 'News.xcodeproj'
-  platform :ios, '12.0'
+  platform :ios, '13.0'
   
   # Feature modules
   local_pod 'DivkitFeature'
+  local_pod 'DivkitCustomFeature'
+  local_pod 'SearchFeature'
   
   local_pod 'BaseUiKit'
 

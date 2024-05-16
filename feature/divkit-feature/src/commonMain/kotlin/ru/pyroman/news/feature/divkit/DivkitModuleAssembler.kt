@@ -2,7 +2,6 @@ package ru.pyroman.news.feature.divkit
 
 import org.kodein.di.DI
 import org.kodein.di.instance
-import ru.pyroman.news.common.core.di.Inject.instance
 import ru.pyroman.news.common.core.di.module
 import ru.pyroman.news.common.core.di.module.Module
 import ru.pyroman.news.common.core.di.module.ModuleBridge
@@ -10,7 +9,6 @@ import ru.pyroman.news.common.core.di.provider
 import ru.pyroman.news.common.core.di.singleton
 import ru.pyroman.news.data.divkit.divkitDataCommonModule
 import ru.pyroman.news.domain.divkit.divkitDomainCommonModule
-import ru.pyroman.news.domain.divkit.usecase.GetViewPatchDataUseCase
 import ru.pyroman.news.feature.divkit.presenter.DivkitPresenterFactory
 import ru.pyroman.news.feature.divkit.usecases.DivkitUseCases
 
@@ -30,7 +28,9 @@ object DivkitModuleAssembler : Module() {
             )
         }
 
-        singleton {
+        singleton(
+            tag = "DivkitPresenterFactory"
+        ) {
             DivkitPresenterFactory()
         }
     }
@@ -44,12 +44,4 @@ object DivkitModuleAssembler : Module() {
     )
 }
 
-abstract class DivkitModuleBridge: ModuleBridge() {
-
-    @Suppress("Unused")
-    companion object {
-        fun divkitPresenterFactoryInstance(): DivkitPresenterFactory = instance()
-
-        fun getViewPatchDataUseCaseInstance(): GetViewPatchDataUseCase = instance()
-    }
-}
+abstract class DivkitModuleBridge: ModuleBridge()

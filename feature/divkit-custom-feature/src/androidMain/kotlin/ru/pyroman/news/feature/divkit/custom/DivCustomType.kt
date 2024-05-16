@@ -4,5 +4,5 @@ enum class DivCustomType(
     val customType: String
 ) {
 
-    EXAMPLE(customType = "example")
+    SEARCH(customType = "search")
 }

@@ -14,7 +14,9 @@ val divkitDomainCommonModule = module("divkitDomainCommonModule") {
         )
     }
 
-    provider {
+    provider(
+        tag = "GetViewPatchDataUseCase",
+    ) {
         GetViewPatchDataUseCase(
             divkitRepository = instance(),
         )

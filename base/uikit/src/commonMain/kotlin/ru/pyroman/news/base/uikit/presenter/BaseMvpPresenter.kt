@@ -26,8 +26,8 @@ open class BaseMvpPresenter<View : MvpView> : MvpPresenter<View>() {
     protected fun <T> launch(
         context: CoroutineContext = Dispatchers.IO,
         block: suspend CoroutineScope.() -> T,
-        onSuccess: (T) -> Unit,
-        onError: (CoroutineContext, Throwable) -> Unit,
+        onSuccess: (T) -> Unit = {},
+        onError: (CoroutineContext, Throwable) -> Unit = { _, _ -> },
     ): Job {
         return coroutineScope.launch(
             context = context + CoroutineExceptionHandler(onError),

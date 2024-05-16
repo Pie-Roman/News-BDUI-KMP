@@ -17,10 +17,19 @@ PODS:
     - VGSLBaseUI (~> 4.1)
   - DivKit_Serialization (29.15.1):
     - VGSLCommonCore (~> 4.1)
+  - DivkitCustomFeature (1.0):
+    - BaseUiKit
+    - CommonUmbrella
+    - DivKit (= 29.15.1)
+    - DivkitFeature
+    - SearchFeature
   - DivkitFeature (1.0):
     - BaseUiKit
     - CommonUmbrella
     - DivKit (= 29.15.1)
+  - SearchFeature (1.0):
+    - BaseUiKit
+    - CommonUmbrella
   - VGSL_Fundamentals (4.2.0):
     - VGSL_Fundamentals_Tiny (= 4.2.0)
   - VGSL_Fundamentals_Tiny (4.2.0)
@@ -40,7 +49,9 @@ PODS:
 DEPENDENCIES:
   - BaseUiKit (from `./Modules/BaseUiKit`)
   - CommonUmbrella (from `../../common/umbrella`)
+  - DivkitCustomFeature (from `./Modules/DivkitCustomFeature`)
   - DivkitFeature (from `./Modules/DivkitFeature`)
+  - SearchFeature (from `./Modules/SearchFeature`)
 
 SPEC REPOS:
   trunk:
@@ -61,8 +72,12 @@ EXTERNAL SOURCES:
     :path: "./Modules/BaseUiKit"
   CommonUmbrella:
     :path: "../../common/umbrella"
+  DivkitCustomFeature:
+    :path: "./Modules/DivkitCustomFeature"
   DivkitFeature:
     :path: "./Modules/DivkitFeature"
+  SearchFeature:
+    :path: "./Modules/SearchFeature"
 
 SPEC CHECKSUMS:
   BaseUiKit: 8c8528ca1cd0af873de9eb1a8f6cd95a90ff5910
@@ -71,7 +86,9 @@ SPEC CHECKSUMS:
   DivKit_LayoutKit: d8cd3826a2d004b159517d514e1580467f89efc3
   DivKit_LayoutKitInterface: 805245d61e6525632171de529592afb880692cae
   DivKit_Serialization: 3921944d94687b824d79bad54ae9811326fc36ca
+  DivkitCustomFeature: 8dbbf25134255f0578d631b5cfe0b859c11576c4
   DivkitFeature: 8317f72015cb2f411347548077a07e5b4c416e4c
+  SearchFeature: 65365584c871e59b3e9bb8581ef4eef69de7d5c4
   VGSL_Fundamentals: 5967995b1ff711ef1fdd459bd07d0b2890478e5c
   VGSL_Fundamentals_Tiny: 37acd9341007d21a4d6a3b07e74803c3ed8410eb
   VGSLBase: 1142504ccd655d0e0cf89691df47e780f633d25a
@@ -80,6 +97,6 @@ SPEC CHECKSUMS:
   VGSLCommonCore: 36d3b0cd249a982961bddbc9682286654e4b66c8
   VGSLNetworking: 1852dcdd30783aecdf83c57a5cb9ba7fab86b86b
 
-PODFILE CHECKSUM: 8a6c72d288a018207bd12fd39ca796abe69d4a40
+PODFILE CHECKSUM: 10e29214c53af73203b29e1274913e4cbe4a65db
 
 COCOAPODS: 1.11.3

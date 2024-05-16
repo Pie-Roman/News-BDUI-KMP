@@ -37,9 +37,12 @@ kotlin {
         }
         commonMain {
             dependencies {
+                implementation(projects.base.uikit)
                 implementation(projects.common.core)
 
                 implementation(projects.feature.divkitFeature)
+
+                implementation(projects.feature.searchFeature)
             }
         }
     }

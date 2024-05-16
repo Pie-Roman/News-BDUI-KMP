@@ -25,15 +25,33 @@ inline fun module(
     noinline init: DI.Builder.() -> Unit,
 ) = DI.Module(name, allowSilentOverride, prefix, init)
 
+fun DI.Builder.importAll(
+    modules: List<DI.Module>,
+) = importAll(modules)
+
+inline fun DirectDIAware.taggedInstance(
+    tag: Any?,
+) = instance<Any>(tag)
+
+inline fun DI.Builder.taggedProvider(
+    tag: Any?,
+    noinline creator: NoArgBindingDI<Any>.() -> Any,
+) = provider(tag, null, creator)
+
 inline fun <reified  T : Any> DI.Builder.provider(
     noinline creator: NoArgBindingDI<Any>.() -> T,
 ) = provider(null, null, creator)
 
 inline fun <reified T : Any> DI.Builder.provider(
-    tag: Any?,
-    overrides: Boolean?,
+    tag: Any? = null,
+    overrides: Boolean? = null,
     noinline creator: NoArgBindingDI<Any>.() -> T,
 ) = bind<T>(tag, overrides) with provider(creator)
+
+inline fun DI.Builder.taggedSingleton(
+    tag: Any?,
+    noinline creator: NoArgBindingDI<Any>.() -> Any,
+) = singleton(tag, null, null, true, creator)
 
 inline fun <reified T : Any> DI.Builder.singleton(
     noinline creator: NoArgBindingDI<Any>.() -> T,
@@ -41,9 +59,9 @@ inline fun <reified T : Any> DI.Builder.singleton(
 
 inline fun <reified T : Any> DI.Builder.singleton(
     tag: Any?,
-    overrides: Boolean?,
-    ref: RefMaker?,
-    sync: Boolean,
+    overrides: Boolean? = null,
+    ref: RefMaker? = null,
+    sync: Boolean = true,
     noinline creator: NoArgBindingDI<Any>.() -> T,
 ) = bind<T>(tag, overrides) with singleton(ref, sync, creator)
 

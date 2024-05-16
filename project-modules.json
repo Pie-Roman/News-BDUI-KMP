@@ -32,8 +32,16 @@
     "path": "data/divkit-data"
   },
   {
+    "module": ":data:search-data",
+    "path": "data/search-data"
+  },
+  {
     "module": ":domain:divkit-domain",
     "path": "domain/divkit-domain"
+  },
+  {
+    "module": ":domain:search-domain",
+    "path": "domain/search-domain"
   },
   {
     "module": ":feature:divkit-feature",
@@ -42,5 +50,9 @@
   {
     "module": ":feature:divkit-custom-feature",
     "path": "feature/divkit-custom-feature"
+  },
+  {
+    "module": ":feature:search-feature",
+    "path": "feature/search-feature"
   }
 ]

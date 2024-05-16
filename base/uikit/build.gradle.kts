@@ -27,6 +27,7 @@ kotlin {
         androidMain {
             dependencies {
                 api(libs.androidx.fragmentKtx)
+                api(libs.androidx.constraintLayout)
             }
         }
 
