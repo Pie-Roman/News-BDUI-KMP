@@ -1,6 +1,6 @@
 package ru.pyroman.news.feature.divkit.presenter
 
-import ru.pyroman.news.base.uikit.presenter.BaseMvpPresenter
+import ru.pyroman.news.base.uikit.mvp.BaseMvpPresenter
 import ru.pyroman.news.common.core.di.Inject.instance
 import ru.pyroman.news.feature.divkit.usecases.DivkitUseCases
 import ru.pyroman.news.feature.divkit.view.DivkitMvpView

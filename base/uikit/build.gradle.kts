@@ -33,7 +33,6 @@ kotlin {
 
         commonMain {
             dependencies {
-                api(libs.pyroman.mvpkmp)
                 implementation(projects.common.core)
             }
         }
